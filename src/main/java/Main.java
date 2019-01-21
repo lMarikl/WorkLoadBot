@@ -48,8 +48,9 @@ public class Main extends TelegramLongPollingBot {
                 sendMsg(message, "Так я еще не умею ;)");
 
             } else {
-                sendMsg(message, ".i.");
+                sendMsg(message, "Я не отвечаю на сообщения");
             }
+
         }
     }
 
@@ -57,6 +58,7 @@ public class Main extends TelegramLongPollingBot {
         SendMessage sendMessage = new SendMessage();
         sendMessage.enableMarkdown(true);
         ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
+        sendMessage.setReplyMarkup(replyKeyboardMarkup);
         replyKeyboardMarkup.setSelective(true);
         replyKeyboardMarkup.setResizeKeyboard(true);
         replyKeyboardMarkup.setOneTimeKeyboard(false);
@@ -84,6 +86,6 @@ public class Main extends TelegramLongPollingBot {
 
     @Override
     public String getBotToken() {
-        return "753950806:AAHfu2W139_pT45ajhyg_YqD5ftXW5GyJUU";
+        return "";
     }
 }
